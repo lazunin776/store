@@ -1,9 +1,24 @@
 import React, {useState} from 'react';
-import {AiOutlineMenu} from "react-icons/ai";
 import {BiKey, BiSearch} from "react-icons/bi";
 import styles from './header.module.scss'
+import { Button, Drawer, Radio, Space } from 'antd';
+import type { DrawerProps } from 'antd/es/drawer';
 
-const Header = ({children}: React.PropsWithChildren) => {
+
+const Header = ({children} : React.PropsWithChildren) => {
+
+    const [open, setOpen] = useState(false);
+    const [placement, setPlacement] = useState<DrawerProps['placement']>('right');
+  
+    const showDrawer = () => {
+      setOpen(true);
+    };
+    
+    const onClose = () => {
+      setOpen(false);
+    };
+  
+    
     return (
         <header className={styles.header}>
             <div>{children}</div>
