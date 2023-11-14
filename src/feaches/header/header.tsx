@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
-import {AiOutlineMenu} from "react-icons/ai";
+import React from 'react';
 import {BiKey, BiSearch} from "react-icons/bi";
 import styles from './header.module.scss'
 
-const Header = ({children}: React.PropsWithChildren) => {
+const Header = () => {
     return (
         <header className={styles.header}>
-            <div>{children}</div>
+            <div></div>
             <div><BiKey/></div>
             <div><BiSearch/></div>
         </header>
