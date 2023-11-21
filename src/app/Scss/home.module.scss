@@ -6,32 +6,107 @@ main{
 .main_container{
     flex-grow: 1;
     display: flex;
-    height: 90vh;
+    padding: 50px 200px 50px 200px;
+    height: calc(100vh - 50px);
     justify-content: center;
 }
 
-.menu_container{
-    position: absolute;
-}
-
-.ui_component{
-    width: 100%;
-    padding: 10px;
-    max-width: 768px;
-    margin-top: 20px;
-    border: 1px solid rgba(0, 0, 0, .2);
-}
-
-.ui_component ul{
-    margin: 0;
-    padding: 10px;
+.central_container{
     flex-grow: 1;
 }
 
-.ui_component ul li{
-    padding: 10px;
-    list-style: none;
-    margin-bottom: 10px;
-    border: 1px solid rgba(0, 0, 0, .2);;
+.central_container h6{
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
 }
+
+.central_container ul{
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 100px 0 100px;
+}
+
+.central_container ul li{
+    padding: 10px;
+    color: #fff;
+    min-width: 200px;
+    list-style: none;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: #000;
+}
+
+.preseneter{
+    flex-grow: 1;
+    padding: 10px;
+    overflow-x: auto;
+    position: relative;
+    padding: 0 100px 10px 100px;
+}
+
+.preseneter > h6{
+    flex-grow: 1;
+    display: flex;
+    padding: 10px;
+    font-weight: 400;
+    background: #D9D9D9;
+    justify-content: flex-start;
+}
+
+.preseneter > div{
+    height: 250px;
+    padding: 10px;
+    overflow-x: auto;
+    position: relative;
+    background: #D9D9D9;
+}
+
+.preseneter > div >div { 
+   height: 90%;
+   display: flex;
+   position: absolute;
+}
+
+
+.cart{
+    height: 100%;
+    width: 200px;
+    color: #fff;
+    display: flex;
+    margin-left: 5px;
+    border-radius: 15px;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+}
+
+
+// .menu_container{
+//     position: absolute;
+// }
+
+// .ui_component{
+//     width: 100%;
+//     padding: 10px;
+//     max-width: 768px;
+//     margin-top: 20px;
+//     border: 1px solid rgba(0, 0, 0, .2);
+// }
+
+// .ui_component ul{
+//     margin: 0;
+//     padding: 10px;
+//     flex-grow: 1;
+// }
+
+// .ui_component ul li{
+//     padding: 10px;
+//     list-style: none;
+//     margin-bottom: 10px;
+//     border: 1px solid rgba(0, 0, 0, .2);;
+// }
 
