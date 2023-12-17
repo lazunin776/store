@@ -1,0 +1,106 @@
+.search_button{
+  padding: 0;
+  border-radius: 20px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.search_list{
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  max-width: 600px;
+  width: 80%;
+  top: 70px;
+  color: black;
+  flex-flow: column;
+  gap: 10px;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+}
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-size: 20px;
+  background: black;
+  color: white !important;
+  border: 2px solid black;
+  transition: 0.3s all linear;
+  margin-right: 15px;
+}
+.button:hover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-size: 20px;
+  background: white;
+  color: black !important;
+  border: 2px solid black;
+  transition: 0.3s all linear;
+}
+.button_good{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-size: 20px;
+  background: white;
+  color: black !important;
+  border: 2px solid black;
+  transition: 0.3s all linear;
+  margin-right: 15px;
+
+}
+
+.button_good:hover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-size: 20px;
+  background: black;
+  color: white !important;
+  border: 2px solid black;
+  transition: 0.3s all linear;
+
+}
+.item{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s all linear;
+  cursor: pointer;
+}
+.item:hover{
+  transition: 0.3s all linear;
+  background: #eceaea;
+}
+.product_name_and_price{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 10px;
+}
+.product_name{
+  font-size: 18px;
+}
+.product_img{
+  height: 100px;
+}

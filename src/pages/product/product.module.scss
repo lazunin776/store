@@ -1,0 +1,163 @@
+.content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.product_content{
+  width: 90%;
+  border-radius: 20px;
+  background: white;
+}
+
+.product_title{
+  font-size: 30px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tabs{
+  padding: 10px;
+  overflow: hidden;
+  height: 100%;
+}
+.main_slide{
+  height: 600px !important;
+  width: 500px !important;
+
+
+
+}
+.small_slide{
+  height: 100px !important;
+  width: 100px !important;
+
+}
+.photo_and_info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo{
+  display: flex;
+  padding: 0;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.main_slider{
+  width: 500px;
+  height: 620px !important;
+}
+.info{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.component_info{
+  padding: 30px;
+  width: 80%;
+  height: 100%;
+  border: 1px solid silver;
+  border-radius: 20px;
+  height: 300px;
+}
+.info_main{
+  display: flex;
+  color: black;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  font-size: 20px;
+  color: gray;
+  border-bottom: 1px solid #cecccc;
+}
+.list_image{
+  height: 200px !important;
+}
+.main_btn{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.price_product{
+  font-size: 25px;
+}
+.button{
+  padding: 10px 25px;
+  background: black;
+  color: white;
+  border-radius:  10px 20px;
+  border: 2px solid black;
+  transition: 0.3s all linear;
+  font-size: 20px;
+}
+.button:hover{
+  transition: 0.3s all linear;
+  background: transparent;
+  color: black;
+
+}
+.button_good{
+  padding: 10px 25px;
+  background: white;
+  color: black;
+  border-radius:  10px 20px;
+  border: 2px solid black;
+  transition: 0.3s all linear;
+  font-size: 20px;
+}
+.button_good:hover{
+  transition: 0.3s all linear;
+  background: black;
+  color: white;
+
+}
+.call{
+  transition: 0.3s all linear;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid black;
+  margin-left: 10px;
+  color: black;
+}
+.call:hover{
+  transition: 0.3s all linear;
+  background: black;
+  color: white;
+}
+@media screen and (max-width: 600px){
+  .main_slide{
+    height: 600px !important;
+    width: 100% !important;
+
+
+
+  }
+}
+.desk_info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.desk{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+p{
+  max-width: 1000px;
+  width: 80%;
+  font-size: 20px;
+}

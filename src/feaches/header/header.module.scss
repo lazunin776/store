@@ -6,4 +6,31 @@
   justify-content: space-between;
   color: white;
   background: black;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.menu{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo_search_input{
+  max-width: 600px;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search_input{
+  max-width: 600px;
+  width: 90%;
+  border-radius: 20;
+}
+.logo_text{
+    height: 45px;
+  img{
+    height: 100%;
+  }
 }

@@ -1,0 +1,24 @@
+
+
+.home_content{
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.swiper_product{
+  height: 600px;
+  width: 90%;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+.mySwiper{
+  margin-top: 20px;
+}

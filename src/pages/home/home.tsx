@@ -1,22 +1,17 @@
-import React, {useState} from 'react';
-import Header from "../../feaches/header/header";
-
+import React from 'react';
+import styles from './home.module.scss'
+import SliderCard from "../../widgets/SliderCard/SliderCard";
+import HomeCategory from "../../widgets/homeCategory/HomeCategory";
+import {Link} from "react-router-dom";
 
 const Home = () => {
-    const [collapsed, setCollapsed] = useState<boolean>(false)
-    const toggleCollapsed = () => {
-        setCollapsed(prev => !prev)
-    }
     return (
-        <>
-            <Header/>
-            <main>
+        <div className={styles.home_content}>
+            <HomeCategory/>
+            <SliderCard title={'Popular product'}/>
+            <SliderCard title={'New Product'}/>
 
-            </main>
-            <footer>
-
-            </footer>
-        </>
+        </div>
     );
 };
 
