@@ -18,7 +18,8 @@ export const UserSchema = new mongoose.Schema({
         required: true
     },
     phoneNumber: {
-        type: String
+        type: String,
+        default: ''
     },
     email: {
         type: String,
@@ -30,9 +31,11 @@ export const UserSchema = new mongoose.Schema({
     },
     profileImage: {
         type: String,
+        default: null
     },
     images: {
-        type: Array
+        type: Array,
+        default: []
     },
     autorized: {
         type: Boolean,
