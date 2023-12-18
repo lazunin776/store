@@ -40,7 +40,11 @@ export const UserSchema = new mongoose.Schema({
     autorized: {
         type: Boolean,
         default: false
-    }
+    },
+    products: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'ProductModel'
+    }]
 })
 
 export const UserModel = mongoose.model('UserModel', UserSchema);

@@ -8,11 +8,12 @@ import useProducts from './Routes/ProductRoutes.js'
 import useUsers from './Routes/UserRoutes.js'
 
 const app = express();
+
 app.use(cors());
-app.use(cookieParser())
+app.use(cookieParser());
 app.use(express.json());
-app.use('/api/users', useUsers)
-app.use('/api/product/', useProducts)
+app.use('/api/users', useUsers);
+app.use('/api/product/', useProducts);
 
 
 

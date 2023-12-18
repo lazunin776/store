@@ -1,13 +1,14 @@
 import { Router } from "express";
 import ProductController from "../Controllers/ProductController";
+import UserConteroller from "../Controllers/UserConteroller";
 
 const router = Router();
 
 
-router.put('/uptade-user', ProductController.updateProduct);
-router.get('/get-all-users', ProductController.getAllProducts);
-router.delete('/delete-user', ProductController.deleteProduct);
-router.post('/create-new-user', ProductController.addNewProduct);
-router.get('/get-user-by-id', ProductController.getProductById);
+router.put('/uptade-user', UserConteroller.updateUser);
+router.get('/get-all-users', UserConteroller.getAllUsers);
+router.delete('/delete-user', UserConteroller.deleteUser);
+router.post('/create-new-user', UserConteroller.createNewUser);
+router.get('/get-user-by-id', UserConteroller.getUserById);
 
 export default router;

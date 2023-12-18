@@ -7,10 +7,15 @@ const ProductShcema = new mongoose.Schema({
     },
     inStock: {
         type: Boolean,
+        default: true
     },
     quantity: {
         type: Number,
         required: true
+    },
+    category: {
+       type: String,
+       required: true
     },
     price: {
         type: mongoose.Types.Decimal128,
@@ -20,13 +25,13 @@ const ProductShcema = new mongoose.Schema({
         type: String,
         default: ''
     },
-    profileImg: {
-        type: String,
-        default: ''
-    },
     images: {
        type: Array, 
        default: []
+    },
+    postedBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'UserModel'
     }
 })
 

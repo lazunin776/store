@@ -82,6 +82,17 @@ export default {
         } catch (err) {
            return res.status(500).json({msn: 'Server Error'});
         }
+    },
+    addProduct: async (req, res) => {
+        try {
+            const {productName, quantity, category, 
+                price, information, images, postedBy} = req.body;
+
+            
+            
+        } catch(err) {
+            return res.status(500).json({msn: 'Server Error'})
+        }
     }
 }
 
