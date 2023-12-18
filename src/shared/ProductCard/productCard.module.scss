@@ -1,0 +1,103 @@
+.product_card{
+  height: 100%;
+  width: 100%;
+  background: white;
+  display: flex;
+  transition: 0.3s all linear;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .image{
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+  }
+  img{
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s all linear;
+
+  }
+  .title_card{
+    text-align: center;
+    width: 80%;
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}
+.price_and_byu{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  width: 100%;
+
+  div{
+    color: gray;
+    font-weight: 100;
+
+  }
+
+  .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 20px;
+    background: black;
+    color: white !important;
+    border: 2px solid black;
+    transition: 0.3s all linear;
+
+  }
+  .button:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 20px;
+    background: white;
+    color: black !important;
+    border: 2px solid black;
+    transition: 0.3s all linear;
+  }
+  .button_good{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 20px;
+    background: white;
+    color: black !important;
+    border: 2px solid black;
+    transition: 0.3s all linear;
+
+  }
+
+  .button_good:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 20px;
+    background: black;
+    color: white !important;
+    border: 2px solid black;
+    transition: 0.3s all linear;
+  }
+
+}
+.product_card:hover{
+
+    img{
+      transition: 0.3s all linear;
+      transform: scale(1.1);
+    }
+}
