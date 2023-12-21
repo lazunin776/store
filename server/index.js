@@ -4,8 +4,10 @@ import mongoose from 'mongoose';
 import cors from 'cors'
 import sources from './sources.js';
 import cookieParser from 'cookie-parser';
-import useProducts from './Routes/ProductRoutes.js'
 import useUsers from './Routes/UserRoutes.js'
+import useProducts from './Routes/ProductRoutes.js'
+import useCategoryies from './Routes/CategoryRoutes.js'
+import useSubcategory from './Routes/SubCategoryRoutes.js'
 
 const app = express();
 
@@ -13,7 +15,9 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use('/api/users', useUsers);
-app.use('/api/product/', useProducts);
+app.use('/api/product', useProducts);
+app.use('/api/categories', useCategoryies);
+app.use('/api/subcategory', useSubcategory);
 
 
 

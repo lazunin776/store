@@ -4,12 +4,13 @@ import mongoose from 'mongoose'
 const CategorySchema = new mongoose.Schema({
     categoryName: {
         type: String,
-        reguired: true
+        reguired: true,
+        unique: true
     },
-    products: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'ProductModel'
-    }]
+    subCategories: [{
+       type: mongoose.Schema.Types.ObjectId,
+       default: []
+    }],
 })
 
 export const CategoryModel = mongoose.model('CategoryModel', CategorySchema);

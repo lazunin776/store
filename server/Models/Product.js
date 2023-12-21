@@ -17,13 +17,25 @@ const ProductShcema = new mongoose.Schema({
        type: String,
        required: true
     },
+    subCategory: {
+       type: String,
+       required: true
+    },
+    description: {
+       type: String,
+       default: ''
+    },
     price: {
         type: mongoose.Types.Decimal128,
         required: true
     },
-    information: {
-        type: String,
-        default: ''
+    rate: {
+        type: Number,
+        default: 0
+    },
+    phoneNumber: {
+       type: String,
+       required: true
     },
     images: {
        type: Array, 

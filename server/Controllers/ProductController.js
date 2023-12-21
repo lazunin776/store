@@ -29,12 +29,18 @@ export default {
     },
     addNewProduct: async (req, res) => {
         try {
-            const { productName, quantity, price, information } = req.body;
+            const { productName, quantity, category, subCategory,
+            price, description, phoneNumber, images, postedBy } = req.body;
             const newProduct = {
                 productName: productName,
                 quantity: quantity,
+                category: category,
+                subCategory: subCategory,
                 price: price,
-                information: information
+                description: description,
+                phoneNumber: phoneNumber,
+                images: images,
+                postedBy: postedBy
             }
 
             const addedProduct = await ProductModel(newProduct);

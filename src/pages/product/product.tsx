@@ -11,13 +11,16 @@ import {SlBasket} from "react-icons/sl";
 import {PhoneOutlined} from "@ant-design/icons";
 import "react-image-gallery/styles/scss/image-gallery.scss";
 import ImageGallery from "react-image-gallery";
+import useProductHooks from '../../Hooks/useProductHooks';
 
 const onChange = (key: string) => {
     console.log(key);
 };
 
 const Product = () => {
-    const {TabPane} = Tabs
+    const {TabPane} = Tabs;
+    
+    const productHooks = useProductHooks();
     const [basket, setBasket] = useState(false)
     const images = [
         {
@@ -64,7 +67,7 @@ const Product = () => {
                                                 Articul:
                                             </div>
                                             <div>
-                                                articul
+                                                {productHooks.articul}
                                             </div>
                                         </div>
                                         <div className={styles.info_main}>
@@ -72,7 +75,7 @@ const Product = () => {
                                                 Category:
                                             </div>
                                             <div>
-                                                category
+                                                {productHooks.category}
                                             </div>
                                         </div>
                                         <div className={styles.info_main}>
@@ -80,7 +83,7 @@ const Product = () => {
                                                 SubCategory:
                                             </div>
                                             <div>
-                                                subcategory
+                                                {productHooks.subcategory}
                                             </div>
                                         </div>
                                         <div className={styles.info_main}>
@@ -88,11 +91,11 @@ const Product = () => {
                                                 Rate
                                             </div>
                                             <div>
-                                                <Rate count={5} defaultValue={3} disabled/>
+                                                <Rate count={5} defaultValue={productHooks.rate} disabled/>
                                             </div>
                                         </div>
                                         <div className={styles.main_btn}>
-                                            <div className={styles.price_product}>Price: 1000</div>
+                                            <div className={styles.price_product}>Price: {productHooks.price}</div>
                                             <div>
                                                 <button className={basket ? styles.button_good : styles.button}
                                                         onClick={() => setBasket(!basket)}>
@@ -113,44 +116,7 @@ const Product = () => {
                                 <div className={styles.desk}>
                                     <div className={styles.product_title}>Description</div>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat elit eu
-                                        metus tincidunt, ac accumsan urna venenatis. Duis nulla augue, interdum vitae
-                                        molestie  quis, egestas non felis. Pellentesque porttitor dapibus sodales. Donec
-                                        a sodales neque. Ut sit amet est ultrices nulla mattis facilisis eu facilisis
-                                        eros. In volutpat nulla semper vulputate fermentum. Pellentesque condimentum
-                                        odio nec odio elementum, at malesuada felis posuere. Pellentesque habitant morbi
-                                        tristique senectus et netus et malesuada fames ac turpis egestas. Integer quis
-                                        libero a mauris mattis eleifend malesuada vel tellus. Aliquam lobortis libero
-                                        eget lorem tempor, sed accumsan mauris feugiat. Donec egestas egestas nisl, quis
-                                        fermentum lectus dapibus a. Vivamus fringilla enim ut est fermentum, eu pulvinar
-                                        lorem ullamcorper. Quisque eget egestas elit, sed faucibus arcu. Mauris
-                                        pellentesque in neque et cursus.
-
-                                        Ut suscipit mi vel pharetra finibus. Maecenas et justo tortor. In auctor
-                                        accumsan ipsum, cursus commodo augue vehicula fringilla. Phasellus tortor dolor,
-                                        sollicitudin vitae dapibus eu, tempus et ligula. Quisque vel vehicula lectus.
-                                        Nullam accumsan lorem vel erat efficitur, facilisis pulvinar nulla convallis.
-                                        Aliquam tortor tortor, blandit at eros vel, finibus mollis dolor.
-
-                                        Fusce pellentesque justo elit, at convallis velit scelerisque sit amet. Lorem
-                                        ipsum dolor sit amet, consectetur adipiscing elit. Morbi diam eros, congue at
-                                        nulla eu, consectetur euismod magna. Proin in lectus ornare, faucibus libero
-                                        eget, luctus leo. In nec volutpat nunc, id consectetur arcu. Mauris ac sagittis
-                                        dui, quis posuere ex. Proin malesuada consectetur risus, id efficitur dui tempor
-                                        sit amet. Nam vehicula, nulla quis sodales porttitor, elit diam venenatis metus,
-                                        et vestibulum ante arcu eu libero. Maecenas nec dignissim sapien.
-
-                                        Curabitur bibendum metus vitae tristique pulvinar. Duis suscipit, justo in
-                                        convallis molestie, nunc odio bibendum tellus, eu commodo justo nulla a ligula.
-                                        Cras et feugiat turpis. Ut ultricies, ligula sed consequat gravida, magna felis
-                                        ultricies ex, vel eleifend erat est sed dolor. Mauris facilisis ante nisi, vel
-                                        pellentesque mauris venenatis vel. Suspendisse at ex blandit, consectetur mauris
-                                        eu, venenatis dui. Vestibulum ac metus sit amet odio ornare condimentum.
-                                        Phasellus tincidunt, justo ornare suscipit suscipit, quam lorem fringilla justo,
-                                        eget ultricies sem mauris vel nisl. Nunc pulvinar dui justo, a tempor turpis
-                                        ullamcorper eu. Quisque lacinia vitae neque et mattis. Nunc non tincidunt nunc.
-                                        Morbi eget ornare ex. Suspendisse a mattis felis, vel tincidunt eros. Vivamus
-                                        eleifend nibh nisl, quis gravida dolor congue id. Quisque a sollicitudin eros.
+                                        {productHooks.description}
                                     </p>
                                 </div>
                             </div>

@@ -1,4 +1,6 @@
 import { UserModel } from '../Models/User.js'
+import { SubCategoryModel } from '../Models/SubCategory.js';
+import { ProductModel } from '../Models/Product.js';
 
 
 export default {
@@ -28,7 +30,7 @@ export default {
     },
     createNewUser: async (req, res) => {
         try {
-            const { firstName, lastName, middleName, dateOfBirth, phoneNumber, email,
+            const { firstName, lastName, dateOfBirth, phoneNumber, email,
                 password, profileImage } = req.body;
             const user = await UserModel.findOne({ email });
 
@@ -71,27 +73,38 @@ export default {
         try {
             const { _id } = req.params;
             const user = await UserModel.findById(_id);
-            
-            if(user){
+
+            if (user) {
                 await UserModel.findByIdAndDelete(_id);
-                return res.status(200).json({msn: 'Successfuly deleted'})
+                return res.status(200).json({ msn: 'Successfuly deleted' })
             }
 
-            return res.status(400).json({msn: "User Not Found"});
+            return res.status(400).json({ msn: "User Not Found" });
 
         } catch (err) {
-           return res.status(500).json({msn: 'Server Error'});
+            return res.status(500).json({ msn: 'Server Error' });
         }
     },
     addProduct: async (req, res) => {
         try {
-            const {productName, quantity, category, 
-                price, information, images, postedBy} = req.body;
+            const { subCategoryId, productName, quantity, category,
+            price, description, images, postedBy } = req.body;
 
-            
-            
-        } catch(err) {
-            return res.status(500).json({msn: 'Server Error'})
+            const updatedSubCategory = await SubCategoryModel.findById(subCategoryId);
+
+            if (updatedSubCategory) {
+                const newProduct = await ProductModel.create({
+                    productName,
+                    quantity, category, price, description, images, postedBy
+                });
+
+                updatedSubCategory.products.push(newProduct);
+            }
+
+            return res.status(400).json({ msn: "Subcategory Not Found" });
+
+        } catch (err) {
+            return res.status(500).json({ msn: 'Server Error' })
         }
     }
 }
