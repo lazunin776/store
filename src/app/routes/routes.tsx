@@ -3,6 +3,7 @@ import {Route, Routes as Rout} from "react-router-dom";
 import {Admin} from '../../pages/admin/pages'
 import '../../App.css'
 import {AnimatePresence} from "framer-motion";
+import {AdminLayout} from '../../pages/layouts/adminLayout/adminLayout'
 
 const Routes = () => {
     const StandartLayout = lazy(() => import('../../pages/layouts/standartLayout/standartLayout'))
@@ -16,7 +17,9 @@ const Routes = () => {
                             <Route  index element={<Suspense><Home/></Suspense>}/>
                             <Route element={<Suspense><Product/></Suspense>} path={'/category/product/:id'}/>
                         </Route>
-                        <Route path={'/admin'} element={<Admin/>}/>
+                        <Route path={'/admin'} element={<AdminLayout/>}>
+                             <Route index element={<Admin/>}/>
+                        </Route>
                     </Rout>
                 </Suspense>
         </AnimatePresence>);

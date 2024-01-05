@@ -5,6 +5,7 @@ import {MenuOutlined, CloseOutlined} from '@ant-design/icons'
 import {useMenu} from "../../../feaches/menu/hooks/MenuHook";
 import MenuList from "../../../feaches/menu/MenuList/MenuList";
 import styles from './admin_layout.module.scss'
+import {Outlet} from 'react-router-dom'
 
 export const AdminLayout = ({children}: React.PropsWithChildren) => {
     const {collapsed, toggleCollapsed} = useMenu()
@@ -22,7 +23,7 @@ export const AdminLayout = ({children}: React.PropsWithChildren) => {
             <main className={styles.main}>
                 <MenuList collapsed={collapsed}/>
                 <div>
-                    {children}
+                    <Outlet/>
                 </div>
 
             </main>
